@@ -8,6 +8,7 @@ node{
 		sh "${mvnHOME}/bin/mvn clean"
 	}
 	stage('test'){
+		def mvnHOME = tool name: 'MAVEN_HOME', type: 'maven'
 		sh "${mvnHOME}/bin/mvn test"
 	}
 	stage('install'){
