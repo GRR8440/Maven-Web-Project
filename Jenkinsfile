@@ -1,6 +1,6 @@
 node{
 	stage('SCM checkout'){
-		git 'https://github.com/GRR8440/Maven-Web-Project.git'
+		git 
 	}
 	stage('compail-package'){
 	// Get maven home path
