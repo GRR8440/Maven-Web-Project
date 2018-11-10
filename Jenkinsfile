@@ -6,7 +6,7 @@ node{
 	}
 	stage('compail-package'){
 	// Get maven home path
-		def MVN_home=tool name: 'MAVEN_HOME', type: 'maven'
+		def MAVEN_home=tool name: 'MAVEN_HOME', type: 'maven'
 		sh "{MAVEN_HOME}/bin/mvn package"
 	}
 		
