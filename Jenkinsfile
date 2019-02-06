@@ -14,11 +14,6 @@ node{
 	stage('install'){
 		def mvnHOME = tool name: 'M2_HOME', type: 'maven'
 		sh "${mvnHOME}/bin/mvn install"
-	}
-	stage('deploy'){
-		def mvnHOME = tool name: 'M2_HOME', type: 'maven'
-		sh "${mvnHOME}/bin/mvn deploy"
-	}
-		
+	}		
 }
 	
