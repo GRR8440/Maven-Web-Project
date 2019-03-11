@@ -4,20 +4,20 @@ node{
 	}
 	stage('clean'){
 	// Get maven home path
-		def mvnHOME = tool name: 'M2_HOME', type: 'maven'
-		sh "${mvnHOME}/bin/mvn clean"
+		def mvn_HOME = tool name: 'mvn_HOME', type: 'maven'
+		sh "${mvn_HOME}/bin/mvn clean"
 	}
 	stage('test'){
-		def mvnHOME = tool name: 'M2_HOME', type: 'maven'
-		sh "${mvnHOME}/bin/mvn test"
+		def mvn_HOME = tool name: 'mvn_HOME', type: 'maven'
+		sh "${mvn_HOME}/bin/mvn test"
 	}
 	stage('install'){
-		def mvnHOME = tool name: 'M2_HOME', type: 'maven'
-		sh "${mvnHOME}/bin/mvn install"
+		def mvn_HOME = tool name: 'mvn_HOME', type: 'maven'
+		sh "${mvn_HOME}/bin/mvn install"
 	}
 	stage('deploy'){
-		def mvnHOME = tool name: 'M2_HOME', type: 'maven'
-		sh "${mvnHOME}/bin/mvn deploy"
+		def mvn_HOME = tool name: 'mvn_HOME', type: 'maven'
+		sh "${mvn_HOME}/bin/mvn deploy"
 	}
 }
 	
